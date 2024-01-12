@@ -6,10 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
   </head>
   <body>
-    <section></section>
+    <form class="form">
+      <input
+        class="search-input"
+        type="text"
+        name="search"
+        placeholder="Search images..."
+        required
+      />
 
-    <script type="module" src="./main.js"></script>
+      <button class="search-btn" type="submit">Search</button>
+    </form>
+
+    <div>
+      <div class="loader">
+        <p class="pageDow">Loading images, please wait...</p>
+      </div>
+      <ul class="gallery"></ul>
+    </div>
+
+    <script type="module" src="./main.js" defer></script>
   </body>
 </html>
