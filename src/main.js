@@ -10,8 +10,6 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const formRes = document.querySelector('.form');
-const searchInputRes = document.querySelector('.search-input');
-const searchBtnRes = document.querySelector('.search-btn');
 const galleryRes = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
 loader.style.display = 'none';
@@ -33,8 +31,8 @@ const styleRef = new SimpleLightbox('.gallery a', {
   docClose: true,
 });
 
-function fetchUsers(paramkkk) {
-  return fetch(`https://pixabay.com/api?${paramkkk}`).then(response => {
+function fetchUsers(paramk) {
+  return fetch(`https://pixabay.com/api?${paramk}`).then(response => {
     if (!response) {
       throw new Error('Request is not ok');
     }
@@ -88,6 +86,6 @@ formRes.addEventListener('submit', e => {
 
   fetchUsers(param)
     .then(data => rendersImg(data))
-    .catch(error => console.log(error));
+    .catch(error => console.log(error.message));
   e.currentTarget.reset();
 });
