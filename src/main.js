@@ -12,7 +12,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const formRes = document.querySelector('.form');
 const galleryRes = document.querySelector('.gallery');
 const loader = document.querySelector('.loader');
-loader.style.display = 'none';
+// loader.style.display = 'none';
 
 const searchParams = {
   key: '41712066-bd7b5e249df7a86bd45ef70ea',
@@ -66,7 +66,7 @@ function rendersImg(data) {
     );
     galleryRes.innerHTML = imgs;
     styleRef.refresh();
-    loader.style.display = 'none';
+    // loader.style.display = 'none';
   } else {
     iziToast.error({
       position: 'topRight',
@@ -80,7 +80,7 @@ function rendersImg(data) {
 formRes.addEventListener('submit', e => {
   e.preventDefault();
   galleryRes.HTML = '';
-  loader.style.display = 'block';
+  // loader.style.display = 'block';
   searchParams.q = formRes.search.value.trim();
   const param = new URLSearchParams(searchParams);
 
