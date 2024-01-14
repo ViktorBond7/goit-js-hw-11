@@ -11,5 +11,5 @@ import{S as d,i as m}from"./assets/vendor-46aac873.js";(function(){const t=docum
           <p><b>Comments</b><span>${p}</span></p>
           <p><b>Downloads</b><span>${f}</span></p>
           </div>
-        </li>`,"");c.innerHTML=t,h.refresh()}else m.error({position:"topRight",width:"10px",message:"Sorry, there are no images matching your search query. Please try again!"})}i.addEventListener("submit",o=>{o.preventDefault(),c.HTML="",l.q=i.search.value.trim();const t=new URLSearchParams(l);y(t).then(s=>g(s)).catch(s=>console.log(s.message)),o.currentTarget.reset()});
+        </li>`,"");c.innerHTML=t,h.refresh()}else m.error({position:"topRight",width:"10px",message:"Sorry, there are no images matching your search query. Please try again!"})}i.addEventListener("submit",o=>{o.preventDefault(),c.HTML="",l.q=i.search.value.trim();const t=new URLSearchParams(l);y(t).then(s=>g(s)).catch(s=>console.log(s)),o.currentTarget.reset()});
 //# sourceMappingURL=commonHelpers.js.map
