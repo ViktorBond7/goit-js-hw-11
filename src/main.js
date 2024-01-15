@@ -89,5 +89,5 @@ formRes.addEventListener('submit', e => {
     .finally(() => {
       loader.style.display = 'none';
     });
-  e.currentTarget.reset();
+  // e.currentTarget.reset();
 });
