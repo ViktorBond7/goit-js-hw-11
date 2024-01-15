@@ -30,8 +30,8 @@ const styleRef = new SimpleLightbox('.gallery a', {
   docClose: true,
 });
 
-function fetchUsers(paramk) {
-  return fetch(`https://pixabay.com/api?${paramk}`).then(response => {
+function fetchUsers(params) {
+  return fetch(`https://pixabay.com/api?${params}`).then(response => {
     if (!response) {
       throw new Error('Request is not ok');
     }
@@ -89,5 +89,5 @@ formRes.addEventListener('submit', e => {
     .finally(() => {
       loader.style.display = 'none';
     });
-  // e.currentTarget.reset();
+  e.currentTarget.reset();
 });
