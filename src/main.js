@@ -73,6 +73,7 @@ function rendersImg(data) {
 
 formRes.addEventListener('submit', e => {
   e.preventDefault();
+  galleryRes.innerHTML = '';
   loader.style.display = 'block';
   searchParams.q = formRes.search.value.trim();
   const param = new URLSearchParams(searchParams);
