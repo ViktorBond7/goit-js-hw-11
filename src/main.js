@@ -1,11 +1,6 @@
-// Описаний у документації
 import iziToast from 'izitoast';
-// Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
-
-// Описаний у документації
 import SimpleLightbox from 'simplelightbox';
-// Додатковий імпорт стилів
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const formRes = document.querySelector('.form');
@@ -32,7 +27,7 @@ const styleRef = new SimpleLightbox('.gallery a', {
 
 function fetchUsers(params) {
   return fetch(`https://pixabay.com/api/?${params}`).then(response => {
-    if (!response) {
+    if (!response.ok) {
       throw new Error('Request is not ok');
     }
     return response.json();
@@ -65,8 +60,8 @@ function rendersImg(data) {
     );
     galleryRes.innerHTML = imgs;
     styleRef.refresh();
-    loader.style.display = 'none';
   } else {
+    galleryRes.innerHTML = '';
     iziToast.error({
       position: 'topRight',
       width: '10px',
@@ -78,7 +73,6 @@ function rendersImg(data) {
 
 formRes.addEventListener('submit', e => {
   e.preventDefault();
-  galleryRes.HTML = '';
   loader.style.display = 'block';
   searchParams.q = formRes.search.value.trim();
   const param = new URLSearchParams(searchParams);
