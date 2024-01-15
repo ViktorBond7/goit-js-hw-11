@@ -162,9 +162,6 @@ button {
   font-weight: 500;
   align-items: center;
 }
-span {
-  font-weight: normal;
-}
 
 .gallery-item:hover {
   cursor: pointer;
