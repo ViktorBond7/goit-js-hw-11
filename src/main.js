@@ -31,7 +31,7 @@ const styleRef = new SimpleLightbox('.gallery a', {
 });
 
 function fetchUsers(params) {
-  return fetch(`https://pixabay.com/api?${params}`).then(response => {
+  return fetch(`https://pixabay.com/api/?${params}`).then(response => {
     if (!response) {
       throw new Error('Request is not ok');
     }
