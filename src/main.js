@@ -86,6 +86,9 @@ formRes.addEventListener('submit', e => {
 
   fetchUsers(param)
     .then(data => rendersImg(data))
-    .catch(error => console.log(error.message));
+    .catch(error => console.log(error.message))
+    .finally(() => {
+      loader.style.display = 'none';
+    });
   e.currentTarget.reset();
 });
